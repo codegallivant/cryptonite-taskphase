@@ -119,3 +119,6 @@ Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX ta
    ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a8c8ea4a-130f-4ec4-a63f-eec3ad5073e5)
 \
 Password: ``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
+
+### Level 13-14
+```ssh -i sshkey.private -p 2220 bandit14@localhost```
