@@ -68,3 +68,14 @@ cat data.txt | tr [a-z] [n-za-m] | tr [A-Z] [N-ZA-M]
 
 <br><br>
 **Password to enter level 12-13:** ``JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv``
+
+## Task 2
+
+### Level 12-13
+1. Reverted hexdump using ``xxd``
+2. Used file command to determine file details (compression details)
+3. Decompressed with appropriate library. Occassionally had to rename decompressed files from data.txt to data.txt.gz in order to decompress them again.
+<br>
+References -
+1. man page of gzip, tar, bzip2
+2. online docs for file, xxd
