@@ -95,7 +95,8 @@ Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX ta
     5. A POSIX tar decompression
        \
        ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/8a7404c9-5c05-44f7-8a7b-4b3e5adaef98)
-3. Final password <br>
+3. Final password
+   \
    ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a8c8ea4a-130f-4ec4-a63f-eec3ad5073e5)
 \
 Password: ``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
