@@ -72,9 +72,28 @@ cat data.txt | tr [a-z] [n-za-m] | tr [A-Z] [N-ZA-M]
 
 ### Level 12-13
 #### Steps -
-1. Reverted hexdump using ``xxd``
-2. Used ``file`` to determine file details (compression details)
-3. Decompressed with appropriate library (depending on compression type). Occassionally had to rename decompressed files from data.txt to data.txt.gz in order to decompress them again.\
+0. Copied and pasted files to writable tmp dir
+   ```
+   mkdir tmp/mything
+   cp /home/bandit12/data.txt tmp/mything/
+   ```
+2. Reverted hexdump using ``xxd``
+   ```
+   xxd -revert data.txt data2.txt
+   ```
+4. Used ``file`` to determine file details (compression details)
+5. Decompressed with appropriate library (depending on compression type).
+   ```gzip
+   mv data.txt data.txt.gz
+   gzip -r -d data.txt.gz
+   ```
+   ```bzip2
+   bzip2 -d data.txt
+   ```
+   ```tar POSIX
+   tar -xvf data.txt
+   ```
+   Note: In the case of gzip, had to rename decompressed files from data.txt to data.txt.gz before decompressing them. \
 Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX tar > gzip > bzip2 > gzip
 
 #### References -
