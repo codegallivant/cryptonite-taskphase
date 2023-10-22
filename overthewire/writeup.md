@@ -49,7 +49,7 @@ cat data.txt | sort | uniq -u
 
 ### Level 9-10
 1. Extract human readable part (text) using strings command
-2. pipe the strings output into the grep -w "=" command
+2. pipe the strings output into the ``grep -w "="`` command
 ```
 strings data.txt | grep -w "="
 ```
