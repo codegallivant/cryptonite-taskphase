@@ -73,7 +73,7 @@ cat data.txt | tr [a-z] [n-za-m] | tr [A-Z] [N-ZA-M]
 ### Level 12-13
 #### Steps -
 1. Reverted hexdump using ``xxd``
-2. Used file command to determine file details (compression details)
+2. Used ``file`` to determine file details (compression details)
 3. Decompressed with appropriate library (depending on compression type). Occassionally had to rename decompressed files from data.txt to data.txt.gz in order to decompress them again.\
 Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX tar > gzip > bzip2 > gzip
 
