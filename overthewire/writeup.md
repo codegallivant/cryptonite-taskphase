@@ -121,4 +121,6 @@ Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX ta
 Password: ``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
 
 ### Level 13-14
-```ssh -i sshkey.private -p 2220 bandit14@localhost```
+```
+ssh -i sshkey.private -p 2220 bandit14@localhost
+```
