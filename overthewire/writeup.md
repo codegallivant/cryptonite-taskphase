@@ -65,11 +65,8 @@ use tr for text rotation. google syntax.
 ```
 cat data.txt | tr [a-z] [n-za-m] | tr [A-Z] [N-ZA-M]
 ```
-
-<br>
 **Password to enter level 12-13:** ``JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv``
 
-<br>
 
 ## Task 2
 
@@ -77,8 +74,7 @@ cat data.txt | tr [a-z] [n-za-m] | tr [A-Z] [N-ZA-M]
 #### Steps -
 1. Reverted hexdump using ``xxd``
 2. Used file command to determine file details (compression details)
-3. Decompressed with appropriate library (depending on compression type). Occassionally had to rename decompressed files from data.txt to data.txt.gz in order to decompress them again.
-<br>
+3. Decompressed with appropriate library (depending on compression type). Occassionally had to rename decompressed files from data.txt to data.txt.gz in order to decompress them again.\
 Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX tar > gzip > bzip2 > gzip
 
 #### References -
@@ -89,14 +85,17 @@ Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX ta
 1. Reversal of hexdump
    ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/59fed786-7da4-4d7d-8d33-6cfd81b5357f)
 
-3. Some decompressions
-  - A gzip decompression <br>
-  ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a552e307-26cb-4f9a-b72d-f17fcb5ee151)
-  - A bzip2 decompression <br>
-  ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/b028402d-02a1-4289-99c5-6cb926dcd4e8)
-  - A POSIX tar decompression <br>
-  ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/8a7404c9-5c05-44f7-8a7b-4b3e5adaef98)
-4. Final password <br>
+2. Some decompressions
+    1. A gzip decompression
+       \
+       ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a552e307-26cb-4f9a-b72d-f17fcb5ee151)
+    3. A bzip2 decompression
+       \
+       ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/b028402d-02a1-4289-99c5-6cb926dcd4e8)
+    5. A POSIX tar decompression
+       \
+       ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/8a7404c9-5c05-44f7-8a7b-4b3e5adaef98)
+3. Final password <br>
    ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a8c8ea4a-130f-4ec4-a63f-eec3ad5073e5)
-<br>
+\
 Password: ``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
