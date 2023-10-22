@@ -43,7 +43,9 @@ grep -w "millionth" data.txt
 ### Level 8-9
 Use pipe character to pipe command output to another command
 pipe from cat to sort to uniq -u
-```cat data.txt | sort | uniq -u```
+```
+cat data.txt | sort | uniq -u
+```
 
 ### Level 9-10
 1. Extract human readable part (text) using strings command
