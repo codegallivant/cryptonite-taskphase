@@ -226,3 +226,25 @@ cat readme
 googled ssh without using bashrc
 #### Password of next level
 ``awhqfNnAbc1naukrpqDYcF95h7HoMTrC``
+
+### Level 19-20
+#### Steps
+1. Ran setuid. Library was not present.
+2. Looked around in directory. Found `./bandit20-do`.
+3. Ran ``file ./bandit20-do`` and found it was an executable.
+4. ```
+   ./bandit20-do
+   ```
+Apparently running the file gives you access as user bandit20.
+5. 
+```
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+#### Screenshots
+1. 
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/5ddd46dd-139b-4acd-aad9-3df5dd706cd6) \
+2. \
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/12a2f10c-c892-4ea5-a9a5-eca4f3d27774)
+#### Password of next level
+``VxCazJaVykI6W36BkBU0mJTCM8rR95XT``
