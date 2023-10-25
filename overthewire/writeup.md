@@ -119,8 +119,8 @@ Order of compression discovered: gzip > POSIX tar > bzip2 > POSIX tar > POSIX ta
 3. Final password
    \
    ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a8c8ea4a-130f-4ec4-a63f-eec3ad5073e5)
-\
-Password: ``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
+#### Password of next level
+``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
 
 ### Level 13-14
 ```
@@ -135,5 +135,25 @@ ssh -i sshkey.private -p 2220 bandit14@localhost
 nc localhost 30000
 fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
 ```
+#### References - 
+netcat docs
+
 #### Screenshot -
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9f78d34a-c6b6-48ff-9e99-45c6033f2c32)
+
+#### Password of next level
+``jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt``
+
+### Level 15-16
+#### Steps - 
+1. Send openssl connection request
+   ```
+   openssl s_client -ign_eof -connect localhost:30001 
+   ```
+   Then paste password of this level in. 
+# References
+openssl s_client docs
+
+#### Password of next level
+``JQttfApK4SeyHwDlI9SXGR50qclOAil1``
+
