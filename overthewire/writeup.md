@@ -162,8 +162,12 @@ openssl s_client docs
    ```
    netstat -tulpn | grep LISTEN
    ```
+   or
+   ```
+   netstat -lntu
+   ```
    This shows several open ports, of which only ``31790`` and ``31518`` are in between 31000 and 32000.
-2. Send SSL connection request to each of the ports, checking for response. On sending to 31790, we obtain the SSH private key for the next level.
+3. Send SSL connection request to each of the ports, checking for response. On sending to 31790, we obtain the SSH private key for the next level.
    ```
    openssl s_client localhost:31790
    ```
@@ -196,7 +200,7 @@ openssl s_client docs
    vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
    -----END RSA PRIVATE KEY-----
    ```
-3. Logout and write the SSH private key to a file and SSH into the next level.
+4. Logout and write the SSH private key to a file and SSH into the next level.
    ```
    echo "<key>" > sshkey.private
    ssh -i sshkey.private -p 2220 bandit17@localhost
