@@ -212,3 +212,17 @@ man diff
 #### Password of next level 
 ``hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg``
 
+### Level 18-19
+#### Steps
+1. SSH without using bashrc
+```
+ssh -t bandit18@bandit.labs.overthewire.org -p 2220 /bin/sh
+```
+2.
+```
+cat readme
+```
+#### References
+googled ssh without using bashrc
+#### Password of next level
+``awhqfNnAbc1naukrpqDYcF95h7HoMTrC``
