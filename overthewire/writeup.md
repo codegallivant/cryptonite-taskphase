@@ -126,3 +126,14 @@ Password: ``wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw``
 ```
 ssh -i sshkey.private -p 2220 bandit14@localhost
 ```
+
+### Level 14-15
+#### Steps -
+1. Password for this level was given in the previous level's desc. - ``fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq``
+2. Sending the password to localhost port 30000 -
+```
+nc localhost 30000
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+```
+#### Screenshot -
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9f78d34a-c6b6-48ff-9e99-45c6033f2c32)
