@@ -270,9 +270,9 @@ echo "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | netcat -l localhost 42010 | cat
 Switch to the other terminal using ``Ctrl+A``>``Ctrl+A``.
 
 #### References
-googled how to open new terminal in ssh
-googled sending messages via netcat
-man netcat
+- stackoverflow - how to open new terminal in ssh
+- stackoverflow - sending messages via netcat
+- man netcat
 
 #### Screenshots
 1. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/dbc1ff06-2b95-4974-bd9d-b37ac78ba859)
