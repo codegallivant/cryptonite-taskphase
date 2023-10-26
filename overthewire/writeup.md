@@ -282,3 +282,38 @@ Switch to the other terminal using ``Ctrl+A``>``Ctrl+A``.
 
 #### Password of next level
 ``NvEJF7oVjkddltPSrdKEFOllh9V1IBcq``
+
+### Level 21-22
+#### Steps
+1. Look in ``/etc/cron.d/``
+   ```
+   find /etc/cron.d/
+   ```
+3. Read ``/etc/cron.d/cronjob_bandit22``
+   ```
+   cat /etc/cron.d/cronjob_bandit22
+   ```
+4. Read the script the cron job is running
+   ```
+   cat /usr/bin/cronjob_bandit22.sh
+   ```
+   Apparently the cron job is to cat the password of user ``bandit22`` to another file. It can do this as it has perms.
+5. Read the file the cron job wrote to.
+   ```
+   cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+   ```
+
+#### References
+man cron
+
+#### Screenshots
+1. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/e718b598-658e-4e60-a61a-59aa91130856)
+2. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9b0826c3-26d2-40e4-99a3-6def83bd66b9)
+3. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/b247045a-355d-4fe8-9e4a-5dd70cbff873)
+4. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/3e9502a5-cf9b-408f-b804-67ad76ace682)
+
+
+
+
+#### Password of next level
+``WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff``
