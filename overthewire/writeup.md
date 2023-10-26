@@ -252,3 +252,33 @@ Apparently running the file gives you access as user bandit20.
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/12a2f10c-c892-4ea5-a9a5-eca4f3d27774)
 #### Password of next level
 ``VxCazJaVykI6W36BkBU0mJTCM8rR95XT``
+
+
+### Level 20-21
+#### Steps
+1. Set up a local port to listen and send data and log the data received.. As this is process will occupy the terminal, we should create another terminal first, using ``screen``
+```
+screen
+```
+```
+echo "VxCazJaVykI6W36BkBU0mJTCM8rR95XT" | netcat -l localhost 42010 | cat
+```
+2.  Use ``Ctrl+A``>``Ctrl+C`` to switch to a new screen terminal. Then -
+```
+./suconnect 42010
+```
+Switch to the other terminal using ``Ctrl+A``>``Ctrl+A``.
+
+#### References
+googled how to open new terminal in ssh
+googled sending messages via netcat
+man netcat
+
+#### Screenshots
+1. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/dbc1ff06-2b95-4974-bd9d-b37ac78ba859)
+2. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/dca74c52-1ca7-4994-8840-7fff30966e9f)
+3. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/11c05ec3-4995-45bc-9506-18e204ee36ba)
+4. ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/bca0a675-1845-4a21-981c-a9c89de0b6f6)
+
+#### Password of next level
+``NvEJF7oVjkddltPSrdKEFOllh9V1IBcq``
