@@ -70,3 +70,9 @@ request("a;cat falg.txt")
 <br>
 **Flag obtained:** ``picoCTF{moooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo0o}``
 
+### Forbidden Paths
+To go up 4 directories to ``flag.txt``, enter ``../../../../flag.txt`` in the input text box.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/c3ffe7fb-5052-4b38-9f43-071e7f8b1713)
+<br>
+**Flag obtained:** ``picoCTF{7h3_p47h_70_5ucc355_e5a6fcbc}``
