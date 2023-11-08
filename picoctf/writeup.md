@@ -76,3 +76,19 @@ To go up 4 directories to ``flag.txt``, enter ``../../../../flag.txt`` in the in
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/c3ffe7fb-5052-4b38-9f43-071e7f8b1713)
 <br>
 **Flag obtained:** ``picoCTF{7h3_p47h_70_5ucc355_e5a6fcbc}``
+
+### Local Authority
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/6b8556c7-854e-4d81-91af-6e5ea6ebb4a0)
+<br>
+First checked source tab and network tab and read through the files. 
+<br>
+Then tried logging in with random credentials. 
+<br>
+The login failed. Then checked the network tab. Saw a ``secure.js`` file. It had the credentials in it.
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/8baf007a-d5f3-414e-bd75-ec17082c3be1)
+<br>
+Logged in with these credentials and the flag was shown.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9068fe91-9327-42e2-ae26-0c52b40ff641)
+<br>
+**Flag obtained:** picoCTF{j5_15_7r4n5p4r3n7_05df90c8}
