@@ -91,4 +91,23 @@ Logged in with these credentials and the flag was shown.
 <br>
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9068fe91-9327-42e2-ae26-0c52b40ff641)
 <br>
-**Flag obtained:** picoCTF{j5_15_7r4n5p4r3n7_05df90c8}
+**Flag obtained:** ``picoCTF{j5_15_7r4n5p4r3n7_05df90c8}``
+
+## Reverse Engineering
+### keygenme-py
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/55999ecb-dfff-4576-80a0-6280c0e9703c)
+
+First I read through the program. Apparently they're using the Fernet library to decrypt an encrypted string. The key for this has to be provided by the user. However, before decrypting the string, they're checking whether the key is valid. In the ``check_key()`` function the program shows the structure of the key. Moreover much of the structure of the key is shown in the variable names.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/df66cc70-6c91-4344-886b-77f3335562b7)
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/f7b0ba5b-169b-447f-9114-c996b714c50c)
+<br><br>
+The static part was already given. To get the dynamic part, I inserted the following snippet near the beginning of the code and ran it -
+<br><br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/84c29319-c585-498f-b408-baba8e140bca)
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/ea97d16f-2093-4109-9eed-911bc88ed7f4)
+<br><br>
+The 2nd line is the flag.
+<br>
+**Flag obtained:** ``picoCTF{1n_7h3_|<3y_of_0d208392}``
