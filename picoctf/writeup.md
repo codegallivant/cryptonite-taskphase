@@ -104,7 +104,15 @@ First I read through the program. Apparently they're using the Fernet library to
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/f7b0ba5b-169b-447f-9114-c996b714c50c)
 <br><br>
 The static part was already given. To get the dynamic part, I inserted the following snippet near the beginning of the code and ran it -
-<br><br>
+```python
+print(hashlib.sha256(bUsername_trial).hexdigest())
+indexes = [4,5,3,6,2,7,1,8]
+key_middle_part = ""
+for i in indexes:
+    key_middle_part += hashlib.sha256(bUsername_trial).hexdigest()[i]
+full_key = key_part_static1_trial + key_middle_part + key_part_static2_trial
+print(full_key)
+```
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/84c29319-c585-498f-b408-baba8e140bca)
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/ea97d16f-2093-4109-9eed-911bc88ed7f4)
 <br><br>
