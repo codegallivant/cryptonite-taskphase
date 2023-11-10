@@ -119,3 +119,63 @@ print(full_key)
 The 2nd line is the flag.
 <br>
 **Flag obtained:** ``picoCTF{1n_7h3_|<3y_of_0d208392}``
+
+### GDB Baby Step 1
+When I opened the file in a text editor it just had random symbols and there were some occassional commands. To find out more I ran the ``file`` command on it.
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/0a97a4ff-ba7b-4269-920f-160ac2f24f26)
+I had no idea what an ELF 64 bit executable was so I googled and found these 2 sources - 
+<br>
+Details on ELF files: https://medium.com/@ajmewal/basics-of-elf-executable-and-linkable-format-file-88a516877356
+<br>
+ELF files and disassembly: https://www.codementor.io/@packt/reverse-engineering-a-linux-executable-hello-world-rjceryk5d
+```
+ELF is short for Executable and Linkable Format. It's a format used for storing binaries, libraries, and core dumps on disks in Linux and Unix-based systems. Moreover, the ELF format is versatile. Its design allows it to be executed on various processor types.
+```
+So basically this ELF file was an executable. Its in binary/assembly language format. Viewing it without first converting it to another format is futile unless you can read it. 
+So I had to use certain commands to convert it to somewhat readable form (assembly language). This is called disassembling it.
+```
+objdump -d debugger0_a > disassembly.asm
+```
+```
+cat disassembly.asm
+```
+The disassembly showed the sections of the file and the several functions within each section.
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/374f37d0-468c-4d0c-abd1-8d78f7ae786b)
+<br>
+The ``main`` function is visible as well. On line 1138, I saw the ``eax`` register, beside which ``0x86342`` was written.
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/693c92a1-ae03-4cce-b988-7dc9ec0dab92)
+<br>
+Converting ``0x86342`` to decimal, we obtain ``549698``.
+<br>
+**Flag obtained:** ``picoCTF{549698}``
+
+### ARMssembly 0
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/70357b29-21c9-4ce1-8b66-85946a2c7b22)
+<br>
+I tried running it using -
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/3292d4e5-b1c6-4371-9d13-44e1c6d5612f)
+<br>
+So its a ARM-V8-a (32 bit) file and I can't run it this way because I'm using an x86_64 (64 bit) OS.
+I thought of downloading a 32 bit gcc compiler for this but maybe that's not an optimal method. I tried reading through the assembly to see if I could understand what commands were being executed but I couldn't. I got stuck at this point but apparently I was half-right. We have to download a few libraries to run this ARM-V8 file. 
+<br>
+I followed this guide to run ARMV8 on x86_64 machines on linux command line - 
+<br>
+https://github.com/joebobmiles/ARMv8ViaLinuxCommandline
+<br>
+First, to convert the .S file (assembly) to .o file (machine code) and then .o to .exe (executable). I had to install (``sudo apt install``) ``binutils-aarch64-linux-gnu`` and ``aarch64-linux-gnu-gcc`` linux libraries for these conversions.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/58e68877-7e3a-4087-93ee-01ff9df703d5)
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/73b9cb91-687a-4075-9e4e-89d632a6ee5a)
+<br>
+However, even after this, if I try to run the file, I receive an error - 
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/f37332fb-2718-4d84-b955-49d3d95e6aed)
+<br>
+This is because this executable can still only be run on ARM-v8 architecture. In order to emulate this architecture, we install another library - ``qemu-user-static``. After installing this, we can run the executable successfully.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/eaa54c21-c44a-4b5b-8bd1-d3af7f4ea512)
+<br>
+Decimal 4134207980 in hexadecimal is F66B01EC.
+<br>
+**Flag obtained:** ``picoCTF{F66B01EC}``
+
