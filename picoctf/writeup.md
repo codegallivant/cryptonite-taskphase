@@ -131,7 +131,7 @@ ELF files and disassembly: https://www.codementor.io/@packt/reverse-engineering-
 ```
 ELF is short for Executable and Linkable Format. It's a format used for storing binaries, libraries, and core dumps on disks in Linux and Unix-based systems. Moreover, the ELF format is versatile. Its design allows it to be executed on various processor types.
 ```
-So basically this ELF file was an executable. Its in binary/assembly language format. Viewing it without first converting it to another format is futile unless you can read it. 
+So basically this ELF file was an executable. Its in binary format. Viewing it without first converting it to another format is futile unless you can read it. 
 So I had to use certain commands to convert it to somewhat readable form (assembly language). This is called disassembling it.
 ```
 objdump -d debugger0_a > disassembly.asm
