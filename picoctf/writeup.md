@@ -178,4 +178,5 @@ This is because this executable can still only be run on ARM-v8 architecture. In
 Decimal 4134207980 in hexadecimal is F66B01EC.
 <br>
 **Flag obtained:** ``picoCTF{F66B01EC}``
-
+<br><br>
+Edit: Could have used ghidra for decompiling files and HxD as a hex editor to read assembly language from binary files.
