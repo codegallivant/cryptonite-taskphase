@@ -183,7 +183,7 @@ Edit: Could have used ghidra for decompiling files and HxD as a hex editor to re
 
 ## Binary Exploitation
 ### stonks
-Looked through the file. It's not the complete code so it didn't say much. It's printing the token at some point though. Added a bunch %p's in the output to get an encrypted form of the key.
+Looked through the file. It's not the complete code so it didn't say much. It's printing the token at some point though. I tried printing off the recent stack storage by adding a bunch of ``%p``'s in the input.
 ```
 0x8e951800x10x8e963900x8e963b00x6f6369700x7b4654430x306c5f490x345f74350x6d5f6c6c0x306d5f790x5f79336e0x633432610x366134310xff94007d0xf7fb9af80xf7f8c4400xec450c000x1
 ```
