@@ -180,3 +180,43 @@ Decimal 4134207980 in hexadecimal is F66B01EC.
 **Flag obtained:** ``picoCTF{F66B01EC}``
 <br><br>
 Edit: Could have used ghidra for decompiling files and HxD as a hex editor to read assembly language from binary files.
+
+## Binary Exploitation
+### stonks
+Looked through the file. It's not the complete code so it didn't say much. It's printing the token at some point though. Added a bunch %p's in the output to get an encrypted form of the key.
+```
+0x8e951800x10x8e963900x8e963b00x6f6369700x7b4654430x306c5f490x345f74350x6d5f6c6c0x306d5f790x5f79336e0x633432610x366134310xff94007d0xf7fb9af80xf7f8c4400xec450c000x1
+```
+Replaced every "0x" with a space. 
+
+```
+8e95180 1 8e96390 8e963b0 6f636970 7b465443 306c5f49 345f7435 6d5f6c6c 306d5f79 5f79336e 63343261 36613431 ff94007d f7fb9af8 f7f8c440 ec450c00 1
+```
+
+Verifying the hexdump was translated fully (I had to do this a lot because of formatting the hexdump incorrectly many times) - 
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/2b137650-9640-4f4a-9b33-ad824363e954)
+<br>
+Copied the outputted key -
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/150c38a5-b8c7-46e7-8a36-e671d7c576bd)
+<br>
+Its still seems to need to be formatted though, as every 4 letters are reversed (visible in known part of the string ``pico{CTF``).
+Created a script to do this - 
+```py
+s = "ocip{FTC0l_I4_t5m_ll0m_y_y3nc42a6a41}"
+
+s2 = ""
+for i in range(0, len(s), 4):
+	substr = s[i:i+4]
+	revsub = ""
+	for i in range(0, len(substr)):
+		revsub = revsub + substr[len(substr)-i-1]
+	s2 = s2 + revsub
+
+print(s2)
+```
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/5da0136b-23ce-4a30-9713-9903005be50d)
+<br>
+**Flag obtained:** ``picoCTF{I_l05t_4ll_my_m0n3y_a24c14a6}``
+
