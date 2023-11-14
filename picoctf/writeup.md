@@ -228,3 +228,11 @@ Used ghidra to go through the downloaded file. Found that entering "p" goes to X
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/17c4b523-61da-405a-9eaf-20f47aa32448)
 <br>
 **Flag obtained:** ``picoCTF{gamer_m0d3_enabled_f4f6ad7d}``
+
+### buffer overflow 0
+Looked through the code. Went through <signal.h> SIGSEGV docs. The flag will be printed whenever an invalid memory location is accessed. The 3rd hint tells me to look at the BUGS section in ``man gets``. I did so, and found that man gets tries to access characters past the end of the buffer. 
+In the following snippet, buf1 is seen to have a max size of 100. So I inputted a string with more than 100 characters.
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/0b97fcd9-af46-42c0-80c3-151286c6afb9)
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/68d22c1c-f030-4dc3-9182-d07778ead62c)
+**Flag obtained**: ``picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}``
+
