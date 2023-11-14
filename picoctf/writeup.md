@@ -221,7 +221,7 @@ print(s2)
 **Flag obtained:** ``picoCTF{I_l05t_4ll_my_m0n3y_a24c14a6}``
 
 ### babygame01
-Used ghidra to go through the downloaded file. Found that entering "p" goes to X immediately. However, after that it just says "You win!" without printing the flag. I checked for the flag in the places above this, only to find it 4 tiles behind tile (0,0). Then I had to press "p" to get to destination X, after which it printed the flag as well.
+Used ghidra to go through the downloaded file. Found that entering "p" goes to X immediately. However, after that it just says "You win!" without printing the flag. I checked for the flag in the places above the player's initial position, only to find it 4 tiles behind tile (0,0). Then I had to press "p" to get to destination X, after which it printed the flag as well.
 <br>
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/20a2848f-0844-4d81-87f3-cee485b73194)
 <br>
