@@ -298,6 +298,29 @@ After removing the spaces and decoding using a base64 decoder -
 **Flag obtained:** ``picoCTF{D1d_u_kn0w_ppts_r_z1p5}``
 
 ## Cryptography
+### miniRSA
+The file contained cipher message C, public key E and public key value N.
+In RSA encryption - 
+2 primes p and q are chosen at random.
+```
+public key value = N = pq
+e = number co prime to (p-1)(q-1)
+m = numeric message to be encrypted
+
+For encryption - 
+c = encrypted message = (m^e) mod n
+
+For decryption -
+de = 1 mod (p-1)(q-1)
+m = decrypted message = (c^d) mod n
+```
+Using [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool),
+```
+./RsaCtfTool.py -n <N> -e <e> --decrypt <cipher>
+```
+<br>
+**Flag obtained:** ``picoCTF{n33d_a_lArg3r_e_d0cd6eae}``
+
 ### basic-mod1
 Wrote this script for encrypting in the asked method -
 ```python
