@@ -240,3 +240,18 @@ In the following snippet, buf1 is seen to have a max size of 100. So I inputted 
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/68d22c1c-f030-4dc3-9182-d07778ead62c)
 **Flag obtained**: ``picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}``
 
+## Forensics
+### Macrohard WeakEdge
+First I opened the .pptm file in HxD. I checked the first two characters, which were ``PK``. I checked online about whether this was possibly a file header, which it was. It was a PKZip file. I was initially trying to find a PKZip extractor but decided to use 7zip. 
+<br>
+After extracting the file, I started navigating through the directories trying to find something that seemed relevant to the flag. I found ``ppt/vbaProject.bin`` and spent a quite a bit of time trying to decode it but turns out it wasn't the actual target.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/5646e0cd-a281-445b-a0e4-6a81488ce9b1)
+<br>
+After searching for hidden files in the directory -
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9bfd4a61-0a48-438a-8f29-6879251e436f)
+<br>
+After removing the spaces and decoding using a base64 decoder - 
+<br>
+**Flag obtained:** ``picoCTF{D1d_u_kn0w_ppts_r_z1p5}``
