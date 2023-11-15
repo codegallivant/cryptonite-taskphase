@@ -329,10 +329,25 @@ After removing the spaces and decoding using a base64 decoder -
 ## Cryptography
 ### new caeser
 An approach to decrypt a message produced would be to reverse the encryption method. Therefore, the steps would involve -
-```
-First step: Find t1 + t2 by reversing modulus
-TODO: How would you get t1 and t2 individually?
-Last step:  Decode from base16
+```python
+import string
+import base64
+#Key = 1 character from ALPHABET
+encs = ""
+LOWERCASE_OFFSET = ord("a")
+ALPHABET = string.ascii_lowercase[:16]
+
+def get_c(shifted_c):
+    index = ALPHABET.index(shifted_c)
+    tsum =
+    #TODO: Find t1+t2 and t1	
+
+s = ""
+for c in encs:
+    s = s + get_c(c)
+
+s = base64.base16decode(s)
+print(s)
 ```
 
 ### miniRSA
