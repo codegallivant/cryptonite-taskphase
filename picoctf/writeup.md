@@ -305,8 +305,8 @@ After removing the spaces and decoding using a base64 decoder -
 ### miniRSA
 The file contained cipher message C, public key E and public key value N.
 In RSA encryption - 
-2 primes p and q are chosen at random.
 ```
+2 primes p and q are chosen at random.
 public key value = N = pq
 phi(N) = (p-1)(q-1)
 e = number co prime to phi(N)
