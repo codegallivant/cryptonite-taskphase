@@ -318,7 +318,6 @@ Using [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool),
 ```
 ./RsaCtfTool.py -n <N> -e <e> --decrypt <cipher>
 ```
-<br>
 **Flag obtained:** ``picoCTF{n33d_a_lArg3r_e_d0cd6eae}``
 
 ### basic-mod1
