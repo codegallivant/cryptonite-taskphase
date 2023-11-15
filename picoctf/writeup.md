@@ -242,7 +242,11 @@ In the following snippet, buf1 is seen to have a max size of 100. So I inputted 
 
 ## Forensics
 ### Trivial File Transfer Protocol
-Downloaded the .tftp file. Used wireshark to view it. It looked like some files were being transferred in a series or TFTP protocol requests. I downloaded all the transferred files, which looked as follows - 
+Downloaded the .tftp file. Used wireshark to view it. It looked like some files were being transferred in a series or TFTP protocol requests. 
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a2c55d97-f772-4e50-8a5d-484854b2a98d)
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/8b372323-3152-4cbe-827c-e28ed9139169)
+<br>
+I downloaded all the transferred files, which looked as follows - 
 <br>
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/4d58b171-79b1-4cb5-87b3-88097f9c89b2)
 <br>
