@@ -1,5 +1,23 @@
 # PicoCTF
-
+## Index
+- [Web Exploitation](https://github.com/codegallivant/cryptonite-taskphase/edit/main/picoctf/writeup.md#web-exploitation)
+	- CaaS
+	- Forbidden paths
+  	- Local Authority
+- [Reverse Engineering](https://github.com/codegallivant/cryptonite-taskphase/edit/main/picoctf/writeup.md#reverse-engineering)
+	- keygenme-py
+ 	- GDB babystep 0
+  	- ARMssembly 0
+- [Binary Exploitation](https://github.com/codegallivant/cryptonite-taskphase/edit/main/picoctf/writeup.md#binary-exploitation)
+  	- stonks
+  	- babygame01
+  	- buffer overflow 0
+- [Forensics](https://github.com/codegallivant/cryptonite-taskphase/edit/main/picoctf/writeup.md#forensics)
+	- Trivial File Transfer Protocol
+	- MacroHard WeakEdge
+- [Cryptography](https://github.com/codegallivant/cryptonite-taskphase/edit/main/picoctf/writeup.md#cryptography)
+	- miniRSA
+ 	- basic-mod1
 ## Web Exploitation
 
 ### CaaS
