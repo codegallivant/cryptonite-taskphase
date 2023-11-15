@@ -259,6 +259,13 @@ In the following snippet, buf1 is seen to have a max size of 100. So I inputted 
 **Flag obtained**: ``picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}``
 
 ## Forensics
+### tunn3l v1s10n
+1. Tried using the `file` command on the file, but it said the file was in ``data`` format, which doesn't really say much. 
+2. Opened the file in HxD. The first 2 characters were BM, which indicates that this is a bitmap file.
+3. When I set the extension to .bmp and tried opening this in an image processing software, it said the header was corrupted.
+4. I got stuck on how to fix this.
+<br>
+Note: Docs on bitmap images - https://en.wikipedia.org/wiki/BMP_file_format
 ### Trivial File Transfer Protocol
 Downloaded the .tftp file. Used wireshark to view it. It looked like some files were being transferred in a series or TFTP protocol requests. 
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a2c55d97-f772-4e50-8a5d-484854b2a98d)
@@ -320,6 +327,14 @@ After removing the spaces and decoding using a base64 decoder -
 **Flag obtained:** ``picoCTF{D1d_u_kn0w_ppts_r_z1p5}``
 
 ## Cryptography
+### new caeser
+An approach to decrypt a message produced would be to reverse the encryption method. Therefore, the steps would involve -
+```
+First step: Find t1 + t2 by reversing modulus
+TODO: How would you get t1 and t2 individually?
+Last step:  Decode from base16
+```
+
 ### miniRSA
 The file contained cipher message C, public key E and public key value N.
 In RSA encryption - 
