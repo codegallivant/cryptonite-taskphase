@@ -241,6 +241,47 @@ In the following snippet, buf1 is seen to have a max size of 100. So I inputted 
 **Flag obtained**: ``picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}``
 
 ## Forensics
+### Trivial File Transfer Protocol
+Downloaded the .tftp file. Used wireshark to view it. It looked like some files were being transferred in a series or TFTP protocol requests. I downloaded all the transferred files, which looked as follows - 
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/4d58b171-79b1-4cb5-87b3-88097f9c89b2)
+<br>
+The pictures and the .deb file didnt have anything immediately noticeable in them so I decided to deal with the .txt files first. Their contents were ROT13 encoded. I used https://dcode.fr/ to detect this. 
+<br>
+Decrypted ``instructions.txt`` - 
+```
+TFTPDOESNTENCRYPTOURTRAFFICSOWEMUSTDISGUISEOURFLAGTRANSFER.FIGUREOUTAWAYTOHIDETHEFLAGANDIWILLCHECKBACKFORTHEPLAN
+```
+Decrypted ``plan.txt`` - 
+```
+IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS
+```
+``instructions.txt`` clearly tells me to look at ``program.deb`` and so I did. I extracted the files using - 
+```
+dpkg -x program.deb debpack
+```
+Looking through the directory, I found ``debpack/usr/bin/steghide`` seemed to be of interest. I tried putting it through ghidra but that didn't really give me much information. Then I looked at ``debpack/usr/share/doc/steghide/README/README``. It clearly states - 
+<br>
+```
+After you have embedded your secret data as shown above you can send the file
+picture.jpg to the person who should receive the secret message. The receiver
+has to use steghide in the following way:
+
+  $ steghide extract -sf picture.jpg
+  Enter passphrase:
+  wrote extracted data to "secret.txt".
+
+If the supplied passphrase is correct, the contents of the original file
+secret.txt will be extracted from the stego file picture.jpg and saved
+in the current directory.
+```
+Okay, so I have to use the command ``steghide extract -sf picture.bmp``. The passphrase for info extraction is indicated in ``plan.txt`` - ``DUEDILIGENCE``. 
+Using the command on ``picture1.bmp`` and ``picture2.bmp`` didn't work, but when used on ``picture3.bmp``, the flag was written into ``flag.txt``.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/87d5ed5e-b6b6-4980-ac17-109ec5eace0a)
+<br>
+**Flag obtained:** ``picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}``
+
 ### Macrohard WeakEdge
 First I opened the .pptm file in HxD. I checked the first two characters, which were ``PK``. I checked online about whether this was possibly a file header, which it was. It was a PKZip file. I was initially trying to find a PKZip extractor but decided to use 7zip. 
 <br>
