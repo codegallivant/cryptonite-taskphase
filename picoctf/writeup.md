@@ -296,3 +296,30 @@ After searching for hidden files in the directory -
 After removing the spaces and decoding using a base64 decoder - 
 <br>
 **Flag obtained:** ``picoCTF{D1d_u_kn0w_ppts_r_z1p5}``
+
+## Cryptography
+### basic-mod1
+Wrote this script for encrypting in the asked method -
+```python
+f = open("message.txt",'r')
+a = f.read()
+# print(a)
+a = a.split()
+a = [(int(x)%37) for x in a]
+a2 = list()
+for x in a:
+	if 0<=x<=25:
+ 		a2.append(chr(x+65))
+	elif 26<=x<=35:
+		a2.append(str(x-26))
+	elif x==36:
+		a2.append("_")
+
+s = ""
+for x in a2:
+	s += x;
+
+print("picoCTF{"+s+"}")
+```
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/df7459c6-f6b1-4b33-8ff0-dfcf8f838ea4)
+**Flag obtained:** ``picoCTF{R0UND_N_R0UND_ADD17EC2}``
