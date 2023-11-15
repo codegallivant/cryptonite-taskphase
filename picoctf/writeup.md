@@ -344,7 +344,7 @@ Using [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool),
 **Flag obtained:** ``picoCTF{n33d_a_lArg3r_e_d0cd6eae}``
 
 ### basic-mod1
-Wrote this script for encrypting in the asked method -
+Wrote this script for decrypting in the asked method -
 ```python
 f = open("message.txt",'r')
 a = f.read()
