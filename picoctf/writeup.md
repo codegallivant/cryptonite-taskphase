@@ -264,8 +264,8 @@ In the following snippet, buf1 is seen to have a max size of 100. So I inputted 
 2. Opened the file in HxD. The first 2 characters were BM, which indicates that this is a bitmap file.
 3. When I set the extension to .bmp and tried opening this in an image processing software, it said the header was corrupted.
 4. I got stuck on how to fix this.
-<br>
 Note: Docs on bitmap images - https://en.wikipedia.org/wiki/BMP_file_format
+
 ### Trivial File Transfer Protocol
 Downloaded the .tftp file. Used wireshark to view it. It looked like some files were being transferred in a series or TFTP protocol requests. 
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/a2c55d97-f772-4e50-8a5d-484854b2a98d)
