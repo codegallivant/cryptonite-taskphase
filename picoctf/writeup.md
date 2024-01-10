@@ -229,6 +229,13 @@ I tried a G-Code translator. It seemed that the CNC machine was drawing somethin
 <br>
 **Flag obtained:** ``picoCTF{num3r1cal_c0ntr0l_1395ffad}``
 
+### crackme-py
+The code to decrypt the ROT47 encoded flag was given within the program itself. I inserted code to call this function and ran the program.
+<br>
+![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/2fe6f0a0-4dc6-468c-a959-9b9284be4aa1)
+<br>
+**Flag obtained:** ``picoCTF{1|\/|_4_p34|\|ut_ef5b69a3}``
+
 ## Binary Exploitation
 ### stonks
 Looked through the file. It's not the complete code so it didn't say much. It's printing the token at some point though. I tried printing off the recent stack storage by adding a bunch of ``%p``'s in the input.
