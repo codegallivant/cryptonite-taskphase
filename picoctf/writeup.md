@@ -4,6 +4,9 @@
 	- CaaS
 	- Forbidden paths
   	- Local Authority
+  	- Insp3ct0r
+  	- where are the robots
+  	- Some assembly required 1
 - [Reverse Engineering](https://github.com/codegallivant/cryptonite-taskphase/blob/main/picoctf/writeup.md#reverse-engineering)
 	- keygenme-py
  	- GDB babystep 0
@@ -110,6 +113,19 @@ Logged in with these credentials and the flag was shown.
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/9068fe91-9327-42e2-ae26-0c52b40ff641)
 <br>
 **Flag obtained:** ``picoCTF{j5_15_7r4n5p4r3n7_05df90c8}``
+
+### Insp3ct0r
+Inspected element and went through files. Different parts of the flag were written in different files.
+**Flag obtained:** ``picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?2e7b23e3}``
+
+### where are the robots
+The website's homepage text says "where are the robots".
+I went to ``/robot.txt`` wherein it hinted to another directory. Upon entering it, the flag appeared.
+**Flag obtained:** ``picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c}``
+
+### Some assembly required 1
+I inspected element and went to the network tab, where there was a file containing what seemed to be the flag obfuscated with other non-readable characters. 
+**Flag obtained:** ``picoCTF{c733fda95299a16681f37b3ff09f901c}``
 
 ## Reverse Engineering
 ### keygenme-py
