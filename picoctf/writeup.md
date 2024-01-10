@@ -116,15 +116,18 @@ Logged in with these credentials and the flag was shown.
 
 ### Insp3ct0r
 Inspected element and went through files. Different parts of the flag were written in different files.
+<be>
 **Flag obtained:** ``picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?2e7b23e3}``
 
 ### where are the robots
 The website's homepage text says "where are the robots".
 I went to ``/robot.txt`` wherein it hinted to another directory. Upon entering it, the flag appeared.
+<br>
 **Flag obtained:** ``picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c}``
 
 ### Some assembly required 1
 I inspected element and went to the network tab, where there was a file containing what seemed to be the flag obfuscated with other non-readable characters. 
+<br>
 **Flag obtained:** ``picoCTF{c733fda95299a16681f37b3ff09f901c}``
 
 ## Reverse Engineering
