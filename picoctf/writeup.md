@@ -12,6 +12,7 @@
  	- GDB babystep 0
   	- ARMssembly 0
   	- speeds and feeds
+  	- crackme-py
 - [Binary Exploitation](https://github.com/codegallivant/cryptonite-taskphase/blob/main/picoctf/writeup.md#binary-exploitation)
   	- stonks
   	- babygame01
