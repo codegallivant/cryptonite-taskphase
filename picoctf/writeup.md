@@ -223,7 +223,7 @@ Edit: Could have used ghidra for decompiling files and HxD as a hex editor to re
 G-Code is being printed/executed on the shop server. G-Code is the language CNC (Computer Numeric Control) machines use.
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/1f75b34d-8062-454e-a62b-5f539b9f5198)
 <br>
-I tried a G-Code translator but the result was to extensive. Then I copy-pasted the code into a G-Code simulator [here](https://gcodetutor.com/cnc-program-simulator.html). 
+I tried a G-Code translator. It seemed that the CNC machine was drawing something but the result was very extensive so I couldn't decipher it all then. Then I copy-pasted the code into a G-Code simulator [here](https://gcodetutor.com/cnc-program-simulator.html). 
 <br>
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/bd6e6ac5-dfcd-413d-9ac4-4676fcfc0da2)
 <br>
