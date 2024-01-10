@@ -1,4 +1,4 @@
-![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/78ce19e0-71a8-4b2d-8603-199240939fae)# PicoCTF
+# PicoCTF
 ## Index
 - [Web Exploitation](https://github.com/codegallivant/cryptonite-taskphase/blob/main/picoctf/writeup.md#web-exploitation)
 	- CaaS
@@ -222,9 +222,12 @@ Edit: Could have used ghidra for decompiling files and HxD as a hex editor to re
 ### speeds and feeds
 G-Code is being printed/executed on the shop server. G-Code is the language CNC (Computer Numeric Control) machines use.
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/1f75b34d-8062-454e-a62b-5f539b9f5198)
-I tried a G-Code translator but the result was to extensive. Then I copy-pasted the code into a G-Code simulator here - https://gcodetutor.com/cnc-program-simulator.html 
+<br>
+I tried a G-Code translator but the result was to extensive. Then I copy-pasted the code into a G-Code simulator [here](https://gcodetutor.com/cnc-program-simulator.html). 
+<br>
 ![image](https://github.com/codegallivant/cryptonite-taskphase/assets/27366422/bd6e6ac5-dfcd-413d-9ac4-4676fcfc0da2)
-**Flag obtained:** picoCTF{num3r1cal_c0ntr0l_1395ffad}``
+<br>
+**Flag obtained:** ``picoCTF{num3r1cal_c0ntr0l_1395ffad}``
 
 ## Binary Exploitation
 ### stonks
